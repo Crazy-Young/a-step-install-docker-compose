@@ -4,10 +4,10 @@
 这是一个docker 一键安装脚本.  
 可以在linunx系统上一条命令部署docker-compose.
 
-### 支持的版本如下
+### 测试的版本如下
 | 系统 |架构|版本| 镜像名 |软件包| 是否测试 |
 |-|-|-|-|-|-|
-|centos| x86_64|7 |CentOS-7-x86_64-Minimal-2009.iso |最小化|× |
+|centos| x86_64|7 |CentOS-7-x86_64-Minimal-2009.iso |最小化|√|
 |centos| x86_64|8 |CentOS-8.3.2011-x86_64-minimal.iso |最小化|×|
 |centos| x86_64|8 |CentOS-Stream-8-x86_64-20210524-boot.iso |最小化|×|
 |debian| x86_64|9 | ||×|
@@ -22,12 +22,12 @@
 
 ### centos 环境
 
-``` curl -L https://gitee.com/Crazy-Young-xf/a-step-install-docker-compose/attach_files/716129/download/install.sh | bash ```
+``` curl -L https://gitee.com/Crazy-Young-xf/a-step-install-docker-compose/attach_files/716196/download/install.sh | bash ```
 
 
 ### debian或ubuntu 环境
 
-``` wget https://gitee.com/Crazy-Young-xf/a-step-install-docker-compose/attach_files/716129/download/install.sh | bash ```
+``` wget https://gitee.com/Crazy-Young-xf/a-step-install-docker-compose/attach_files/716196/download/install.sh && bash install.sh ```
 
 ## 参与贡献
 1.  Fork 本仓库

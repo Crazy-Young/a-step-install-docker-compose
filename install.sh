@@ -239,6 +239,7 @@ function run(){
         debian|ubuntu)
             apt install  -y apt-transport-https ca-certificates curl gnupg lsb-release
             local url=$(getFastUrl ${DOCKER_CE_URLS[*]})
+            rm -rf /usr/share/keyrings/docker-archive-keyring.gpg
             curl -fsSL $url/linux/$OS_NAME/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
             echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] $url/linux/$OS_NAME $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
             apt update
