@@ -1,6 +1,6 @@
 # a-step-install-docker-compose
 
-#### 介绍
+## 介绍
 通过脚本在linunx系统上一条命令部署docker-compose.
 目前只实现了centos7+的实现.
 未来会加入的版本
@@ -9,22 +9,27 @@
 * centos-stream
 * arm的debian
 
+| 系统 |版本| 镜像名 | 是否测试通过 |
+|-|-|-|-|
+|centos|||
+|centos|||
+|debian|||
+|debian|||
+|ubuntu|||
+|ubuntu|||
 
-#### 使用说明
 
-一键运行
-``` curl ```
+## 使用说明
 
-#### 参与贡献
+centos 环境
+``` curl -L https://gitee.com/Crazy-Young-xf/a-step-install-docker-compose/attach_files/709087/download/a-step-install-docker-compose.sh | bash ```
+
+
+debian 环境
+``` wget https://gitee.com/Crazy-Young-xf/a-step-install-docker-compose/attach_files/709087/download/a-step-install-docker-compose.sh | bash ```
+
+## 参与贡献
 1.  Fork 本仓库
 2.  新建 Feat_xxx 分支
 3.  提交代码
 4.  新建 Pull Request
-
-#### 特技
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
