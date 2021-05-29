@@ -18,7 +18,7 @@
 
 
 ## 使用说明
-此脚本均可一步运行.使用命令在下面.
+此脚本均可一步运行.使用命令在下面.  
 ubuntu 可能会出现"Waiting for cache lock"问题.需要重启主机.
 
 ### centos或ubuntu 环境
