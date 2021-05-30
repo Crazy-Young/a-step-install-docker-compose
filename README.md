@@ -10,10 +10,9 @@
 |centos| x86_64|7 |CentOS-7-x86_64-Minimal-2009.iso |最小化|√|
 |centos| x86_64|8 |CentOS-8.3.2011-x86_64-minimal.iso |最小化|√|
 |centos| x86_64|8 |CentOS-Stream-8-x86_64-20210524-boot.iso |最小化|√|
-|debian| x86_64|9 | ||×|
 |debian| x86_64|10 | debian-live-10.9.0-amd64-standard.iso|默认|√|
-|ubuntu|x86_64| 18.04 | ||×|
-|ubuntu|x86_64| 20.04 | ubuntu-20.04.2-live-server-amd64.iso|默认|√|
+|ubuntu|x86_64| 18.04 |ubuntu-18.04.5-server-amd64.iso |最小化|√|
+|ubuntu|x86_64| 20.04 | ubuntu-20.04.2-live-server-amd64.iso|最小化|√|
 |raspbian| arm64 | | ||×|
 
 
