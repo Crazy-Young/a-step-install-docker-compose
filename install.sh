@@ -28,7 +28,8 @@ GITHUB_URLS=(
   "https://github.wuyanzheshui.workers.dev"
   "https://github.bajins.com"
   "https://github.rc1844.workers.dev"
-#  "https://github.com.cnpmjs.org"
+  "https://github.com.cnpmjs.org"
+  "https://hub.fastgit.org"
 )
 PIP_URLS=(
   "https://repo.huaweicloud.com/repository/pypi/simple"
@@ -254,6 +255,33 @@ function run(){
     # install docker compose
     local url=$(getFastUrl ${GITHUB_URLS[*]})
     echo "Github url: $url"
+        case $OS_NAME in
+        centos)
+            if [[ `curl -o /dev/null -s -w '%{http_code}' -L "$url/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)"` -eq 200 ]] ; then
+                curl -L "$url/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                chmod +x /usr/local/bin/docker-compose
+            else
+                local url=$(getFastUrl ${PIP_URLS[*]})
+                yum install -y python3 python3-pip
+                pip install -i $url pip -U
+                pip install docker-compose
+            fi
+        ;;
+        debian|ubuntu)
+            if [[ `curl -o /dev/null -s -w '%{http_code}' -L "$url/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)"` -eq 200 ]] ; then
+                curl -L "$url/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                chmod +x /usr/local/bin/docker-compose
+            else
+                local url=$(getFastUrl ${PIP_URLS[*]})
+                apt install -y python3 python3-pip
+                pip install -i $url pip -U
+                pip install docker-compose
+            fi
+        ;;
+        *)
+            exit 
+        ;;
+    esac
     if [[ `curl -o /dev/null -s -w '%{http_code}' -L "$url/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)"` -eq 200 ]] ; then
         curl -L "$url/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
         chmod +x /usr/local/bin/docker-compose
